@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="PixelizerBridgeManifest" format=3]
+
+[ext_resource type="Script" path="res://addons/pixelizer_3d/core/pixelizer_bridge_entry.gd" id="1_2tshe"]
+[ext_resource type="Script" path="res://addons/pixelizer_3d/core/pixelizer_bridge_manifest.gd" id="2_6erws"]
+
+[sub_resource type="Resource" id="Resource_fkh33"]
+script = ExtResource("1_2tshe")
+source_path = "res://addons/MarchingSquaresTerrain/resources/shaders/mst_terrain.gdshader"
+source_hash = "a0b82f9ab1ff96e0431fc6ed0443024d605a8fb3d7a7b668b04f5582665e1c92"
+approved = true
+has_vertex = true
+has_fragment = true
+writes_alpha = true
+output_path = "res://pixelizer_bridges/mst_terrain.gdshader"
+generated_hash = "41348bd6482a73440b4f09fbd85ba61f3d8ef7ff56937803b1a6ae2dd5ff5459"
+rules_version = 2
+
+[sub_resource type="Resource" id="Resource_q6xcv"]
+script = ExtResource("1_2tshe")
+source_path = "res://addons/MarchingSquaresTerrain/resources/shaders/mst_terrain_baked.gdshader"
+source_hash = "d84567ab2736a798f5535ea7457554fb9d52d9e28c7d318511f93adcdd70755b"
+approved = true
+has_fragment = true
+output_path = "res://pixelizer_bridges/mst_terrain_baked.gdshader"
+generated_hash = "ab806db808b533c432844addce92d99d2f63930766eefa2252ee55f9207e3485"
+rules_version = 2
+
+[sub_resource type="Resource" id="Resource_yvcmq"]
+script = ExtResource("1_2tshe")
+source_path = "res://addons/MarchingSquaresTerrain/resources/shaders/mst_grass.gdshader"
+source_hash = "7e8764053147bd892671afb62ad4308a7d81b12893e62ef1fdacba14452d7e8f"
+approved = true
+has_vertex = true
+has_fragment = true
+writes_alpha = true
+output_path = "res://pixelizer_bridges/mst_grass.gdshader"
+generated_hash = "c7a1c92439821ce934c05b1f08b81b54e8bacdaf7bb61d7707cec526e28e846c"
+rules_version = 2
+
+[resource]
+script = ExtResource("2_6erws")
+roots = PackedStringArray("res://addons/MarchingSquaresTerrain")
+entries = Array[ExtResource("1_2tshe")]([SubResource("Resource_fkh33"), SubResource("Resource_q6xcv"), SubResource("Resource_yvcmq")])

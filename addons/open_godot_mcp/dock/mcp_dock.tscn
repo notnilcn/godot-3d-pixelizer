@@ -1,0 +1,334 @@
+[gd_scene format=3 uid="uid://ddlg20yoedpnb"]
+
+[ext_resource type="Script" uid="uid://b477wy2p1ve22" path="res://addons/open_godot_mcp/dock/mcp_dock.gd" id="1"]
+
+[node name="OpenGodot" type="Control" unique_id=2125183047]
+custom_minimum_size = Vector2(200, 320)
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Scroll" type="ScrollContainer" parent="." unique_id=419600710]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBox" type="VBoxContainer" parent="Scroll" unique_id=1137440922]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="Scroll/VBox" unique_id=995860553]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Open Godot MCP"
+autowrap_mode = 3
+
+[node name="StatusLabel" type="Label" parent="Scroll/VBox" unique_id=1664215363]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Status: Not connected"
+autowrap_mode = 3
+
+[node name="InfoLabel" type="Label" parent="Scroll/VBox" unique_id=854447275]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "bridge:false runtime:false port:6970"
+autowrap_mode = 3
+
+[node name="UpdateBanner" type="VBoxContainer" parent="Scroll/VBox" unique_id=563925219]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="UpdateLabel" type="Label" parent="Scroll/VBox/UpdateBanner" unique_id=78904856]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="UpdateBtnRow" type="HBoxContainer" parent="Scroll/VBox/UpdateBanner" unique_id=1729478786]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="UpdateBtn" type="Button" parent="Scroll/VBox/UpdateBanner/UpdateBtnRow" unique_id=2060342628]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Update"
+text_overrun_behavior = 3
+
+[node name="ReleaseNotesBtn" type="Button" parent="Scroll/VBox/UpdateBanner/UpdateBtnRow" unique_id=147964015]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Release notes"
+text_overrun_behavior = 3
+
+[node name="UpdateSeparator" type="HSeparator" parent="Scroll/VBox/UpdateBanner" unique_id=664549839]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer1" type="Control" parent="Scroll/VBox" unique_id=1678361392]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ReconnectBtn" type="Button" parent="Scroll/VBox" unique_id=1106551787]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reconnect"
+text_overrun_behavior = 3
+
+[node name="LangRow" type="HBoxContainer" parent="Scroll/VBox" unique_id=676663570]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="LangLabel" type="Label" parent="Scroll/VBox/LangRow" unique_id=105592683]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Language"
+
+[node name="LangOption" type="OptionButton" parent="Scroll/VBox/LangRow" unique_id=1937904213]
+layout_mode = 2
+size_flags_horizontal = 3
+text_overrun_behavior = 3
+selected = 0
+item_count = 20
+popup/item_0/text = "en"
+popup/item_0/id = 0
+popup/item_1/text = "zh-TW"
+popup/item_1/id = 1
+popup/item_2/text = "zh-CN"
+popup/item_2/id = 2
+popup/item_3/text = "ar"
+popup/item_3/id = 3
+popup/item_4/text = "de"
+popup/item_4/id = 4
+popup/item_5/text = "es"
+popup/item_5/id = 5
+popup/item_6/text = "fr"
+popup/item_6/id = 6
+popup/item_7/text = "hi"
+popup/item_7/id = 7
+popup/item_8/text = "id"
+popup/item_8/id = 8
+popup/item_9/text = "it"
+popup/item_9/id = 9
+popup/item_10/text = "ja"
+popup/item_10/id = 10
+popup/item_11/text = "ko"
+popup/item_11/id = 11
+popup/item_12/text = "nl"
+popup/item_12/id = 12
+popup/item_13/text = "pl"
+popup/item_13/id = 13
+popup/item_14/text = "pt-BR"
+popup/item_14/id = 14
+popup/item_15/text = "ru"
+popup/item_15/id = 15
+popup/item_16/text = "th"
+popup/item_16/id = 16
+popup/item_17/text = "tr"
+popup/item_17/id = 17
+popup/item_18/text = "uk"
+popup/item_18/id = 18
+popup/item_19/text = "vi"
+popup/item_19/id = 19
+
+[node name="Spacer2" type="HSeparator" parent="Scroll/VBox" unique_id=1935422305]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScreenshotSection" type="VBoxContainer" parent="Scroll/VBox" unique_id=303546483]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="ScreenshotTitle" type="Label" parent="Scroll/VBox/ScreenshotSection" unique_id=2012232841]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Screenshot cleanup"
+autowrap_mode = 3
+
+[node name="ScreenshotRow1" type="VBoxContainer" parent="Scroll/VBox/ScreenshotSection" unique_id=1105414879]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="MaxCountLabel" type="Label" parent="Scroll/VBox/ScreenshotSection/ScreenshotRow1" unique_id=138730833]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Max count"
+autowrap_mode = 3
+
+[node name="MaxCountSpin" type="SpinBox" parent="Scroll/VBox/ScreenshotSection/ScreenshotRow1" unique_id=419938481]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 999.0
+value = 50.0
+
+[node name="ScreenshotRow2" type="VBoxContainer" parent="Scroll/VBox/ScreenshotSection" unique_id=41449837]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="MaxAgeLabel" type="Label" parent="Scroll/VBox/ScreenshotSection/ScreenshotRow2" unique_id=1266157883]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Max age (h)"
+autowrap_mode = 3
+
+[node name="MaxAgeSpin" type="SpinBox" parent="Scroll/VBox/ScreenshotSection/ScreenshotRow2" unique_id=1987925853]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 720.0
+value = 24.0
+
+[node name="AgnesSection" type="VBoxContainer" parent="Scroll/VBox" unique_id=132535253]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="AgnesTitle" type="Label" parent="Scroll/VBox/AgnesSection" unique_id=742381401]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Agnes API (free)"
+autowrap_mode = 3
+
+[node name="AgnesEnable" type="CheckButton" parent="Scroll/VBox/AgnesSection" unique_id=1108624624]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enable Agnes"
+text_overrun_behavior = 3
+
+[node name="AgnesKeyLabel" type="Label" parent="Scroll/VBox/AgnesSection" unique_id=1309971989]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Agnes API Key"
+autowrap_mode = 3
+
+[node name="AgnesKeyEdit" type="TextEdit" parent="Scroll/VBox/AgnesSection" unique_id=2136823402]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "One key per line
+sk-xxx
+sk-yyy"
+
+[node name="AgnesVision" type="CheckButton" parent="Scroll/VBox/AgnesSection" unique_id=807338493]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Vision (see images)"
+text_overrun_behavior = 3
+
+[node name="AgnesImageGen" type="CheckButton" parent="Scroll/VBox/AgnesSection" unique_id=932555397]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Image generation"
+text_overrun_behavior = 3
+
+[node name="AgnesVideoGen" type="CheckButton" parent="Scroll/VBox/AgnesSection" unique_id=1633494810]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Video generation"
+text_overrun_behavior = 3
+
+[node name="NvidiaSection" type="VBoxContainer" parent="Scroll/VBox" unique_id=938140811]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="NvidiaTitle" type="Label" parent="Scroll/VBox/NvidiaSection" unique_id=1316859453]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "NVIDIA API (free)"
+autowrap_mode = 3
+
+[node name="NvidiaEnable" type="CheckButton" parent="Scroll/VBox/NvidiaSection" unique_id=162602757]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enable NVIDIA"
+text_overrun_behavior = 3
+
+[node name="NvidiaKeyLabel" type="Label" parent="Scroll/VBox/NvidiaSection" unique_id=395353952]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "NVIDIA API Key"
+autowrap_mode = 3
+
+[node name="NvidiaKeyEdit" type="TextEdit" parent="Scroll/VBox/NvidiaSection" unique_id=797598175]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "One key per line
+nvapi-xxx
+nvapi-yyy"
+
+[node name="NvidiaVision" type="CheckButton" parent="Scroll/VBox/NvidiaSection" unique_id=1935217823]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Vision (see images, base64)"
+text_overrun_behavior = 3
+
+[node name="NvidiaImageGen" type="CheckButton" parent="Scroll/VBox/NvidiaSection" unique_id=2085594608]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Image generation (FLUX)"
+text_overrun_behavior = 3
+
+[node name="ConfigLocationSection" type="VBoxContainer" parent="Scroll/VBox" unique_id=281785488]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="ConfigLocationTitle" type="Label" parent="Scroll/VBox/ConfigLocationSection" unique_id=1728697612]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Config location"
+autowrap_mode = 3
+
+[node name="ProjectConfigCheck" type="CheckButton" parent="Scroll/VBox/ConfigLocationSection" unique_id=184629742]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Use project-level config"
+text_overrun_behavior = 3
+
+[node name="ConfigPathLabel" type="Label" parent="Scroll/VBox/ConfigLocationSection" unique_id=74497624]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Path: C:/Users/Clinton/OneDrive/g/main/client/.open_godot_mcp/config.json"
+autowrap_mode = 3
+
+[node name="SaveBtn" type="Button" parent="Scroll/VBox" unique_id=765558170]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+text_overrun_behavior = 3
+
+[node name="SaveStatusLabel" type="Label" parent="Scroll/VBox" unique_id=792325388]
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="GitWarningLabel" type="Label" parent="Scroll/VBox" unique_id=333847647]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="ConfigHelpLabel" type="Label" parent="Scroll/VBox" unique_id=989278637]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Config stored in this project. Add .open_godot_mcp/ to .gitignore to protect API keys."
+autowrap_mode = 3

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MarchingSquaresTool" format=3 uid="uid://wj5y1ijpvdax"]
+
+[ext_resource type="Texture2D" uid="uid://25d62ul8thx5" path="res://addons/MarchingSquaresTerrain/editor/icons/import_export_tool.svg" id="1_icon"]
+[ext_resource type="Script" uid="uid://b6jopat61dbd3" path="res://addons/MarchingSquaresTerrain/editor/tools/scripts/marching_squares_tool_attribute_settings.gd" id="1_settings"]
+[ext_resource type="Script" uid="uid://brkjbcthwswel" path="res://addons/MarchingSquaresTerrain/editor/tools/scripts/marching_squares_tool.gd" id="1_tool"]
+
+[sub_resource type="Resource" id="Resource_import_export"]
+script = ExtResource("1_settings")
+export_path = true
+import_path = true
+export_button = true
+import_button = true
+metadata/_custom_type_script = "uid://b6jopat61dbd3"
+
+[resource]
+script = ExtResource("1_tool")
+icon = ExtResource("1_icon")
+label = "Import/Export"
+tooltip = "Import/Export Tool
+
+Exports the terrain to versioned JSON (absolute axial hex coords) or imports it back.
+
+[INFO]
+• \"Export Path\" is the JSON file the terrain is written to (res:// or absolute path).
+• \"Import Path\" is the JSON file to read terrain from.
+• \"Export\" writes all chunks of the current terrain to the export path.
+• \"Import\" reads the import path, creating any missing chunks, and overwrites the hexes it contains."
+attributes = SubResource("Resource_import_export")
+metadata/_custom_type_script = "uid://brkjbcthwswel"

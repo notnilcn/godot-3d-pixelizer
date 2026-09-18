@@ -1,0 +1,15 @@
+.godot/
+capture.png
+capture_metadata.png
+palette_lut_debug.png
+tests/captures/*
+!tests/captures/.gdignore
+tests/logs/
+__pycache__/
+*.tmp
+*.uid
+*.import
+*.png
+*.log
+ALIASES.md
+!docs/images/*.png
